@@ -3,11 +3,15 @@
     margin: 0;
     padding: 0;
     text-align: center;
+    box-sizing: border-box;
 }
 
 body {
     background: #EEE;
     cursor: default;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
 /* Program Container */
@@ -15,7 +19,8 @@ body {
     z-index: 1;
     background: #EEE;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    padding-bottom: 50px;
 }
 
 /* Navigation Button */
@@ -24,9 +29,12 @@ body {
     cursor: pointer;
     position: fixed;
     z-index: 101;
-    top: 0%;
+    top: 10px;
     left: 5px;
-    transition: 1s;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 .navBtn1,
@@ -35,13 +43,11 @@ body {
     width: 35px;
     height: 5px;
     background-color: #333;
-    margin: 6px 0;
-    transition: 1s;
+    transition: 0.3s;
 }
 
 .change {
     left: 90%;
-    transition: 1s;
 }
 
 .change .navBtn1 {
@@ -64,7 +70,7 @@ body {
     z-index: 100;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0, 0.7);
+    background-color: rgba(0,0,0, 0.8);
     overflow-x: hidden;
     transition: 0.6s;
 }
@@ -78,7 +84,7 @@ body {
 }
 
 .theNavBackground a {
-    padding: 8px;
+    padding: 12px;
     text-decoration: none;
     font-size: 36px;
     color: #818181;
@@ -93,8 +99,13 @@ body {
 
 /* Pages */
 .page {
-    margin-top: 30px;
-    background: none;
+    display: none;
+    margin: 50px auto 50px auto;
+    padding: 40px 20px;
+    max-width: 900px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     animation: pageFadeIn 1s ease;
 }
 
@@ -105,55 +116,55 @@ body {
 
 /* Titles */
 .title {
-    font-size: 45px;
+    font-size: 40px;
+    font-weight: bold;
     border: 2px solid black;
     padding: 10px;
+    margin-bottom: 20px;
     transition: 0.5s;
 }
 
 .title:hover {
-    font-size: 55px;
+    font-size: 50px;
     padding: 15px;
 }
 
 /* General Text */
 .text {
-    font-size: 30px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0%);
+    font-size: 20px;
+    text-align: left;
     width: 90%;
+    margin: auto;
 }
 
 #aboutJobs {
-    font-size: 25px;
-    text-decoration: italic;
+    font-size: 18px;
+    font-style: italic;
+    margin: 10px 0;
 }
 
 a {
     color: blue;
-    font-size: 30px;
-    transition: 0.5s;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* Updates */
 .update {
-    border: 2px solid black;
-    transform: translate(3%, 0%);
-    padding: 10px;
-    width: 90%;
-    height: 100%;
-    margin-bottom: 10px;
+    border-left: 4px solid #333;
+    padding-left: 15px;
+    margin: 10px 0;
 }
 
 /* Members */
 .members {
     border: 2px solid black;
     border-radius: 0px 25px;
-    transform: translate(3%, 0%);
-    padding: 10px;
-    width: 90%;
-    height: 100%;
+    padding: 15px;
     margin-bottom: 10px;
     transition: 0.5s;
 }
@@ -164,103 +175,102 @@ a {
 
 .membersName {
     text-decoration: underline;
-    margin-bottom: 20px;
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
 .memberInfo {
-    font-size: 30px;
+    font-size: 18px;
 }
 
 /* Form Inputs */
 .input {
-    width: 60%;
-    height: 30px;
-    color: black;
-    line-height: 30px;
-    font-size: 20px;
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 #submitJoinFormBtn {
-    width: 100px;
-    height: 30px;
+    width: 120px;
+    height: 35px;
     text-transform: uppercase;
     color: black;
     background: white;
     border: 2px solid black;
-    font-size: 15px;
-    transition: 0.2s;
-    margin: 20px;
+    font-size: 16px;
+    margin: 20px 0;
+    transition: all 0.3s ease;
 }
 
 #submitJoinFormBtn:hover {
     cursor: pointer;
-    font-size: 20px;
-    width: 120px;
-    height: 40px;
+    font-size: 18px;
+    width: 140px;
+    height: 45px;
 }
 
+/* Copy Form */
 #copyForm {
-    background: white;
-    padding-top: 20px;
-    padding-left: 10px;
+    background: #f7f7f7;
+    padding: 20px;
     text-align: left;
-    transform: translate(20%, 0%);
-    color: black;
-    width: 70%;
-    border: 2px solid rgb(130, 130, 130);
-    line-height: 20px;
-    font-size: 20px;
-    display: none;
-}
-
-.hide {
+    margin: 20px auto;
+    width: 80%;
+    border: 2px solid #ccc;
+    border-radius: 8px;
     display: none;
 }
 
 /* Tutorials */
-#theTutorials {
-    position: absolute;
-    list-style: none;
-    width: 90%;
-    transform: translate(5%, 0%);
-}
-
-#theTutorials li {
-    margin-top: 10px;
-    width: 100%;
-    height: 100%;
-    line-height: 45px;
-}
-
-#theTutorials a {
-    border: 2px solid black;
-    display: block;
-    color: black;
-    background-color: none;
-    font-size: 25px;
-    text-decoration: none;
-    border-radius: 5px 25px 5px 25px;
-    padding: 5px;
-    transition: 0.5s;
-}
-
-#theTutorials a:hover {
-    border-radius: 25px 5px 25px 5px;
-    background-color: rgb(125, 125, 125);
-}
-
-/* Search Bar */
 #tutorialSearchBar {
     width: 50%;
-    height: 20px;
-    font-size: 15px;
-    margin-top: 10px;
-    transition: 0.7s;
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: 0.5s;
 }
 
 #tutorialSearchBar:focus {
     width: 90%;
     height: 40px;
-    font-size: 25px;
-    margin-top: 10px;
+    font-size: 22px;
+}
+
+#theTutorials {
+    list-style: none;
+    padding: 0;
+}
+
+#theTutorials li {
+    margin: 10px 0;
+}
+
+#theTutorials a {
+    display: block;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px 25px 5px 25px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+#theTutorials a:hover {
+    border-radius: 25px 5px 25px 5px;
+    background-color: #bbb;
+}
+
+/* Footer */
+.footer-text {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    color: gray;
 }
