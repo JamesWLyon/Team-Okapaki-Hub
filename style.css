@@ -1,0 +1,266 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+body {
+    background: #EEE;
+    cursor: default;
+}
+
+/* Program Container */
+#program {
+    z-index: 1;
+    background: #EEE;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Navigation Button */
+.navBtn {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    z-index: 101;
+    top: 0%;
+    left: 5px;
+    transition: 1s;
+}
+
+.navBtn1,
+.navBtn2,
+.navBtn3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 1s;
+}
+
+.change {
+    left: 90%;
+    transition: 1s;
+}
+
+.change .navBtn1 {
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .navBtn2 {
+    transform: rotate(-45deg) translate(0px, -1.5px);
+}
+
+.change .navBtn3 {
+    transform: rotate(45deg) translate(-10px, -7px);
+}
+
+/* Navigation Menu */
+.theNavBackground {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.7);
+    overflow-x: hidden;
+    transition: 0.6s;
+}
+
+.theNavContent {
+    position: relative;
+    top: 0%;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.theNavBackground a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.theNavBackground a:hover,
+.theNavBackground a:focus {
+    color: #FFF;
+}
+
+/* Pages */
+.page {
+    margin-top: 30px;
+    background: none;
+    animation: pageFadeIn 1s ease;
+}
+
+@keyframes pageFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Titles */
+.title {
+    font-size: 45px;
+    border: 2px solid black;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.title:hover {
+    font-size: 55px;
+    padding: 15px;
+}
+
+/* General Text */
+.text {
+    font-size: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 90%;
+}
+
+#aboutJobs {
+    font-size: 25px;
+    text-decoration: italic;
+}
+
+a {
+    color: blue;
+    font-size: 30px;
+    transition: 0.5s;
+}
+
+/* Updates */
+.update {
+    border: 2px solid black;
+    transform: translate(3%, 0%);
+    padding: 10px;
+    width: 90%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+/* Members */
+.members {
+    border: 2px solid black;
+    border-radius: 0px 25px;
+    transform: translate(3%, 0%);
+    padding: 10px;
+    width: 90%;
+    height: 100%;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.members:hover {
+    border-radius: 25px 0px;
+}
+
+.membersName {
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.memberInfo {
+    font-size: 30px;
+}
+
+/* Form Inputs */
+.input {
+    width: 60%;
+    height: 30px;
+    color: black;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+#submitJoinFormBtn {
+    width: 100px;
+    height: 30px;
+    text-transform: uppercase;
+    color: black;
+    background: white;
+    border: 2px solid black;
+    font-size: 15px;
+    transition: 0.2s;
+    margin: 20px;
+}
+
+#submitJoinFormBtn:hover {
+    cursor: pointer;
+    font-size: 20px;
+    width: 120px;
+    height: 40px;
+}
+
+#copyForm {
+    background: white;
+    padding-top: 20px;
+    padding-left: 10px;
+    text-align: left;
+    transform: translate(20%, 0%);
+    color: black;
+    width: 70%;
+    border: 2px solid rgb(130, 130, 130);
+    line-height: 20px;
+    font-size: 20px;
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+/* Tutorials */
+#theTutorials {
+    position: absolute;
+    list-style: none;
+    width: 90%;
+    transform: translate(5%, 0%);
+}
+
+#theTutorials li {
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    line-height: 45px;
+}
+
+#theTutorials a {
+    border: 2px solid black;
+    display: block;
+    color: black;
+    background-color: none;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 5px 25px 5px 25px;
+    padding: 5px;
+    transition: 0.5s;
+}
+
+#theTutorials a:hover {
+    border-radius: 25px 5px 25px 5px;
+    background-color: rgb(125, 125, 125);
+}
+
+/* Search Bar */
+#tutorialSearchBar {
+    width: 50%;
+    height: 20px;
+    font-size: 15px;
+    margin-top: 10px;
+    transition: 0.7s;
+}
+
+#tutorialSearchBar:focus {
+    width: 90%;
+    height: 40px;
+    font-size: 25px;
+    margin-top: 10px;
+}
