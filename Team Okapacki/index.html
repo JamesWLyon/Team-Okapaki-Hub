@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Team Okapacki</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload="setUpPage();">
+        <div id="program">
+            <!--Nav Btn-->
+            <div class="navBtn" onclick="navBtn(this)">
+                <div class="navBtn1"></div>
+                <div class="navBtn2"></div>
+                <div class="navBtn3"></div>
+            </div>
+
+            <!--Nav Menu-->
+            <div id="theNav" class="theNavBackground">
+                <div class="theNavContent">
+                    <a href="javascript:pageSwitch(1);">Home</a>
+                    <a href="javascript:pageSwitch(2);">About</a>
+                    <a href="javascript:pageSwitch(3);">Updates</a>
+                    <a href="javascript:pageSwitch(7);">Tutorials</a>
+                    <a href="javascript:pageSwitch(4);">Members</a>
+                    <a href="javascript:pageSwitch(5);">Join</a>
+                    <a href="javascript:pageSwitch(6);">Subscribe</a>
+                </div>
+            </div>
+
+            <!-- Pages -->
+            <div class="page" id="homePage">
+                <span class="title">Team Okapacki</span><br><br><br>
+                <p class="text">
+                    Here at Team Okapacki, we strive to learn, help each other, and become better coders! 
+                    Join today or <a href="javascript:pageSwitch(6);">subscribe</a> to stay updated.<br><br>
+                    <span style="font-size: 20px;">
+                        Team Okapacki All Rights Reserved | 2021-<script>document.write(new Date().getFullYear())</script>
+                    </span>
+                </p>
+            </div>
+
+            <div class="page" id="aboutPage">
+                <span class="title">What Is Team Okapacki</span><br><br><br>
+                <div class="text">
+                    Team Okapacki (Ō-ka-pack-e) is a coding team consisting of:<br>
+                    <div id="aboutJobs">
+                        <em>
+                            <div id="htmlDevNum"></div>
+                            <div id="jsDevNum"></div>
+                            <div id="graphicDevNum"></div>
+                            <div id="deBugDevNum"></div>
+                            <div id="grammerChNum"></div>
+                            <div id="gameTestNum"></div>
+                        </em>
+                    </div>
+                    who work together to create wonderful projects. This team has also been around since 2021.
+                    <br><br><span style="font-size: 20px;">
+                        Team Okapacki All Rights Reserved | 2021-<script>document.write(new Date().getFullYear())</script>
+                    </span>
+                </div>
+            </div>
+
+            <div class="page" id="updatesPage">
+                <span class="title">Updates</span><br><br><br>
+                <div class="text">
+                    <div class="update">
+                        5/10/21 - 3:37 pm<br>
+                        I updated the website to set the correct size and started a tutorial on 3D design in HTML.
+                    </div>
+                    <div class="update">
+                        5/5/21 - 6:45 pm<br>
+                        Fixed grammar thanks to the team's grammar checkers.
+                    </div>
+                    <div class="update">
+                        5/5/21 - 12:04 pm<br>
+                        Added the tutorials page with a search bar.
+                    </div>
+                    <!-- More updates omitted for brevity -->
+                    <br><span style="font-size: 20px;">
+                        Team Okapacki All Rights Reserved | 2021-<script>document.write(new Date().getFullYear())</script>
+                    </span>
+                </div>
+            </div>
+
+            <div class="page" id="membersPage">
+                <span class="title">Meet The Team</span><br><br><br>
+                <div class="text">
+                    <div id="teamMembersCount"></div><br>
+                    <!-- Example member -->
+                    <div class="members">
+                        <div class="membersName">TheGenuineGenius - The Team Owner</div>
+                        <div class="memberInfo">
+                            <em>
+                                <strong>JOBS</strong><br>
+                                <span class="htmlDev">HTML Developer</span><br>
+                                <span class="jsDev">JS Developer</span><br>
+                                <span class="graphicDev">Graphic (Artist) Designer</span><br>
+                                <span class="deBugDev">Program Debugger</span><br><br>
+                                <strong>EXPERIENCE</strong><br>
+                                <span>HTML - Advanced</span><br>
+                                <span>JS - Intermediate</span><br>
+                                <span>Graphic (Artist) - Intermediate</span>
+                                <span>Program Debugger - Intermediate</span><br>
+                            </em>
+                        </div>
+                    </div>
+                    <!-- Additional members omitted for brevity -->
+                    <br><span style="font-size: 20px;">
+                        Team Okapacki All Rights Reserved | 2021-<script>document.write(new Date().getFullYear())</script>
+                    </span>
+                </div>
+            </div>
+
+            <div class="page" id="joinPage">
+                <span class="title">Join The Team</span><br><br><br>
+                <div class="text">
+                    <!-- Join form steps -->
+                    <div style="border: 2px solid black; padding: 20px; margin-top: 20px; margin-bottom: 10px;">
+                        2) Fill Out Sign Up Form<br><br>
+                        <em>What is your username?</em><br>
+                        <input class="input" id="getUserName" type="text" placeholder="Enter username..."><br>
+                        <em>What position(s) do you want?</em><br>
+                        <input class="input" id="getPositions" type="text" placeholder="Enter position(s)..."><br>
+                        <em>Experience level?</em><br>
+                        <input class="input" id="getExperienceLvl" type="text" placeholder="Experience level..."><br>
+                        <em>Time on Khan Academy per week?</em><br>
+                        <input class="input" id="timeOnKhan" type="text" placeholder="Enter time amount on khan..."><br>
+                        <em>Your best program?</em><br>
+                        <input class="input" id="getBestProgram" type="text" placeholder="Program link..."><br>
+                        <em>Sub-page link (if any)</em><br>
+                        <input class="input" id="getSubPage" type="text" placeholder="Sub-page link..."><br>
+                        <input id="submitJoinFormBtn" type="button" value="submit" onClick="submitJoinForm()">
+                        <div id="copyForm"></div>
+                    </div>
+                    <br><span style="font-size: 20px;">
+                        Team Okapacki All Rights Reserved | 2021-<script>document.write(new Date().getFullYear())</script>
+                    </span>
+                </div>
+            </div>
+
+            <div class="page" id="subscribePage">
+                <span class="title">Subscribe</span><br><br>
+                <div class="text">
+                    Post a "." in the thread labeled "Sub To Team Okapacki" to subscribe.<br><br><br>
+                    <span style="font-size: 20px;">
+                        Team Okapacki All Rights Reserved | 2021-<script>document.write(new Date().getFullYear())</script>
+                    </span>
+                </div>
+            </div>
+
+            <div class="page" id="tutorialsPage">
+                <span class="title">Tutorials</span><br><br>
+                <div class="text">
+                    <input id="tutorialSearchBar" type="text" placeholder="Enter a subject..." onkeyup="searchTutorials();">
+                    <ul id="theTutorials">
+                        <li><a href="https://www.khanacademy.org/computer-programming/nav-bars-and-how-to-make-them/6585673564766208">Nav Bar Types And How To Make Them</a></li>
+                        <li><a href="#">Animation Types And When To Best Use Them</a></li>
+                        <li><a href="#">???</a></li>
+                    </ul>
+                    <p style="font-size:14px; margin-top:10px;">
+                        Original Project Link: <a href="https://www.khanacademy.org/computer-programming/team-okapacki/5843391819497472" target="_blank">Khan Academy Project</a><br>
+                        Note: Any .json functionality using the Khan Academy API no longer works and has been non-functional since 2021.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+</html>
